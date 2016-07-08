@@ -22,6 +22,7 @@
 
                 if (!store_clicked) {
                     $('#main_nav').show();
+                    microsoft_store.backgroundColor = '#f4f4f4';
                     store_clicked = !store_clicked;
                 }
                 else {
@@ -42,11 +43,15 @@
                     activate: function (a) {
                         var idx = $(a).index();
                         $('#flyouts ul').eq(idx).show();
+
+                        $('#main_nav li a').css({'background-color':'#f4f4f4'});
+                        $('#main_nav li a').eq(idx).css({'background-color':'#dcdcdc'});
                     },  // fired on row activation
                     deactivate: function (a) {
                         var idx = $(a).index();
                         $('#flyouts ul').eq(idx).hide();
                     }  // fired on row deactivation
+
                 });
             });
         }
@@ -55,7 +60,7 @@
 
 </head>
 <body>
-<nav id="microsoft_nav" class="container">
+<nav id="microsoft_nav" class="container-fluid">
     <div class="row">
         <div class="col-md-2">
             <a href="#">
@@ -66,52 +71,75 @@
             <span>Store</span>
         </div>
     </div>
+
+
     <ul id="main_nav">
-        <li><a href="#">Item 1</a></li>
-        <li><a href="#">Item 2</a></li>
-        <li><a href="#">Item 3</a></li>
-        <li><a href="#">Item 4</a></li>
-        <li><a href="#">Item 5</a></li>
+        <li><a href="#">Store hone</a></li>
+        <li><a href="#">Devices <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+        <li><a href="#">Software <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+        <li><a href="#">Apps <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+        <li><a href="#">Games <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+        <li><a href="#">Entertainment <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+        <li><a href="#">Business & Education <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+        <li><a href="#">Sale <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
+        <li><a href="#">Find a store</a></li>
+        <li><a href="#">Gift cards</a></li>
     </ul>
     <div id="flyouts">
-        <ul class="sub-menu">
-            <li><a href="#">Sub Item 1</a></li>
-            <li><a href="#">Sub Item 2</a></li>
-            <li><a href="#">Sub Item 3</a></li>
-            <li><a href="#">Sub Item 4</a></li>
+        <ul class="none">
         </ul>
 
         <ul class="sub-menu">
-            <li><a href="#">Sub Item 1</a></li>
-            <li><a href="#">Sub Item 2</a></li>
-            <li><a href="#">Sub Item 3</a></li>
-            <li><a href="#">Sub Item 4</a></li>
-            <li><a href="#">Sub Item 5</a></li>
-            <li><a href="#">Sub Item 6</a></li>
-            <li><a href="#">Sub Item 7</a></li>
-            <li><a href="#">Sub Item 8</a></li>
+            <li><a href="#">Microsoft Surface</a></li>
+            <li><a href="#">PCs & tablets</a></li>
+            <li><a href="#">Xbox</a></li>
+            <li><a href="#">Virtual reality</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Windows phone</a></li>
+            <li><a href="#">Microsoft Band</a></li>
         </ul>
 
         <ul class="sub-menu">
-            <li><a href="#">Sub Item 1</a></li>
-            <li><a href="#">Sub Item 2</a></li>
-            <li><a href="#">Sub Item 3</a></li>
-            <li><a href="#">Sub Item 4</a></li>
-            <li><a href="#">Sub Item 5</a></li>
-            <li><a href="#">Sub Item 6</a></li>
-            <li><a href="#">Sub Item 7</a></li>
+            <li><a href="#">Office</a></li>
+            <li><a href="#">Windows</a></li>
+            <li><a href="#">Additional software</a></li>
         </ul>
 
         <ul class="sub-menu">
-            <li><a href="#">Sub Item 1</a></li>
-            <li><a href="#">Sub Item 2</a></li>
+            <li><a href="#">All apps</a></li>
+            <li><a href="#">Windows apps</a></li>
+            <li><a href="#">Windows phone apps</a></li>
         </ul>
 
         <ul class="sub-menu">
-            <li><a href="#">Sub Item 1</a></li>
-            <li><a href="#">Sub Item 2</a></li>
-            <li><a href="#">Sub Item 3</a></li>
-            <li><a href="#">Sub Item 4</a></li>
+            <li><a href="#">Xbox One games</a></li>
+            <li><a href="#">Xbox 360 games</a></li>
+            <li><a href="#">PC games</a></li>
+            <li><a href="#">Windows games</a></li>
+            <li><a href="#">Windows phone games</a></li>
+        </ul>
+
+        <ul class="sub-menu">
+            <li><a href="#">All Entertainment</a></li>
+            <li><a href="#">Movies & TV</a></li>
+            <li><a href="#">Music</a></li>
+        </ul>
+
+        <ul class="sub-menu">
+            <li><a href="#">Business Store</a></li>
+            <li><a href="#">Education Store</a></li>
+            <li><a href="#">Developer</a></li>
+        </ul>
+
+        <ul class="sub-menu">
+            <li><a href="#">Back-to-school essentials</a></li>
+            <li><a href="#">Sale</a></li>
+        </ul>
+
+        <ul class="none">
+        </ul>
+
+        <ul class="none">
         </ul>
 
     </div>

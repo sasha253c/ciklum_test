@@ -15,28 +15,38 @@ blockquote:before, blockquote:after, q:before, q:after { content: '';	content: n
 /*------------------------------------------------------------------------------
 	Basic Styles
 ------------------------------------------------------------------------------*/
+@font-face {
+    font-family: SegoeUI;
+    src: url(../fonts/segoeui.ttf);
+}
+
 
 /* HTML Tags */
 body {
+    font-family: SegoeUI;
     padding: 0px;
+}
+
+.none {
+    display: none;
 }
 
 #microsoft_nav > .row{
     height: 48px;
     width: 100%;
     padding: 0px;
-    border: 3px solid black;
+    border: 1px solid #eeeeee;
 }
 
 #microsoft_logo {
     width: 108px;
     height: 23px;
     margin: 10px;
+    margin-left: 70px;
 }
 
 #microsoft_store{
     height: 48px;
-    border: 1px solid green;
     text-align: center;
     vertical-align: 40px;
     padding: 0px 10px;
@@ -46,7 +56,6 @@ body {
 #microsoft_store span{
     position: relative;
     top: 10px;
-    color: green;
     height: 48px;
 }
 
@@ -59,35 +68,56 @@ ul ul {
 }
 
 #main_nav {
-    border: 1px solid red;
-    position: relative;
-    left: -95px;
+    border: 1px solid #fbfbfb;
+    position: absolute;
+    left: 198px;
+    top: 48px;
     float: left;
-    width: 239px;
-    background-color: #ebebeb;
+    background-color: #f4f4f4;
     display: none;
+
+    border: 1px solid lightgray;
 }
 
 #main_nav > li {
-    width: 200px;
-    padding: 15px;
+
 }
 #main_nav li a {
     display: block;
+    width: 239px;
+    padding: 17px 24px;
+    color: #515151;
+}
+
+#main_nav li a:hover {
+    background-color: #dcdcdc;
+}
+
+#main_nav li a span{
+    float: right;
 }
 
 .sub-menu {
-    width: 300px;
     height: 547px;
     position: absolute;
     top: 48px;
-    left: 465px;
+    left: 437px;
     display: none;
-    background-color: #d3d3d3;
-    padding: 15px;
+    background-color: #dddddd;
 }
 
-#main_nav li.hover .sub-menu {
+.sub-menu li a {
+    display: block;
+    width: 300px;
+    padding: 17px 24px;
+    color: #515151;
+}
+
+.sub-menu li a:hover {
+    background-color: #d0d0d0;
+}
+
+#main_nav li:hover .sub-menu {
     display: block;
 }
 
@@ -100,5 +130,4 @@ ul ul {
 }
 
 #flyouts ul li {
-    padding: 15px;
 }
