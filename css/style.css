@@ -1,16 +1,43 @@
 /* http://meyerweb.com/eric/tools/css/reset/ | v2.0 | 20110126 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0;	border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
-th, thead { text-align: left; }
-img { display: block; border: none; }
+th, thead {
+    text-align: left;
+}
+
+img {
+    display: block;
+    border: none;
+}
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 
-body { line-height: 1; }
-ol, ul { list-style: none; }
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: '';	content: none; }
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
 
 /*------------------------------------------------------------------------------
 	Basic Styles
@@ -24,8 +51,6 @@ blockquote:before, blockquote:after, q:before, q:after { content: '';	content: n
     font-family: OpenSans;
     src: url(../fonts/OpenSans-Light.ttf);
 }
-
-
 
 /* HTML Tags */
 body {
@@ -52,27 +77,26 @@ body {
     float: left;
 }
 
-#microsoft_logo a img{
+#microsoft_logo a img {
     width: 108px;
     height: 23px;
 }
 
-#microsoft_store{
+#microsoft_store {
     height: 48px;
     text-align: center;
     vertical-align: 40px;
     padding: 0px 10px;
 
-
 }
 
-.microsoft_nav{
+.microsoft_nav {
     height: 48px;
     float: left;
     padding: 0px 20px;
 }
 
-.microsoft_nav_right{
+.microsoft_nav_right {
     float: right;
 }
 
@@ -83,22 +107,22 @@ body {
     color: #515151;
 }
 
-.microsoft_nav:hover{
+.microsoft_nav:hover {
     background-color: #f4f4f4;
 }
-
 
 ul ul {
     padding: 0 0 0 2em;
 }
 
-.microsoft_nav_menu{
+.microsoft_nav_menu {
     float: left;
     background-color: #f4f4f4;
     display: none;
     clear: both;
     border: 1px solid lightgray;
 }
+
 .microsoft_nav_menu li a {
     display: block;
     width: 239px;
@@ -106,7 +130,7 @@ ul ul {
     color: #515151;
 }
 
-.microsoft_nav_menu li a:hover{
+.microsoft_nav_menu li a:hover {
     background-color: #dcdcdc;
 }
 
@@ -120,12 +144,11 @@ ul ul {
     left: 179px;
 }
 
-#microsoft_products_nav{
+#microsoft_products_nav {
     position: absolute;
     top: 48px;
     left: 250px;
 }
-
 
 .sub-menu {
     position: absolute;
@@ -133,13 +156,13 @@ ul ul {
     background-color: #dddddd;
 }
 
-#microsoft_store_submenu .sub-menu{
+#microsoft_store_submenu .sub-menu {
     top: 48px;
     left: 420px;
     height: 547px;
 }
 
-#microsoft_products_submenu .sub-menu{
+#microsoft_products_submenu .sub-menu {
     top: 48px;
     left: 490px;
     min-height: 272px;
@@ -160,14 +183,14 @@ ul ul {
     display: block;
 }
 
-#microsoft_products_nav li:hover .sub-menu{
+#microsoft_products_nav li:hover .sub-menu {
     display: block;
 }
-
 
 #microsoft_store_submenu, #microsoft_products_submenu {
     float: left;
 }
+
 #microsoft_store_submenu ul, #microsoft_products_submenu ul {
     display: none;
 }
@@ -177,25 +200,25 @@ ul ul {
     margin: 0px;
 }
 
-#microsoft_nav_form form{
+#microsoft_nav_form form {
     margin: 3px;
     border: 1px solid #a0a0a0;
 }
 
-#microsoft_nav_form form input{
+#microsoft_nav_form form input {
     width: 244px;
     height: 36px;
     border: none;
     float: left;
 
-
 }
-#microsoft_nav_form form:focus{
+
+#microsoft_nav_form form:focus {
     border: none;
 
 }
 
-#microsoft_nav_form form button{
+#microsoft_nav_form form button {
     width: 33px;
     height: 33px;
     background-image: url(../images/search_icon.png);
@@ -205,8 +228,7 @@ ul ul {
     border: none;
 }
 
-
-#invision{
+#invision {
     height: auto;
     width: 100%;
     background-color: #323a45;
@@ -214,7 +236,7 @@ ul ul {
     font-family: OpenSans;
 }
 
-#invision h2{
+#invision h2 {
     color: #ffffff;
     text-align: center;
     font-size: 30px;
@@ -227,7 +249,7 @@ ul ul {
 
 }
 
-#invision form input{
+#invision form input {
     width: 280px;
     height: 63px;
     padding: 18px 15px 18px 48px;
@@ -253,7 +275,7 @@ ul ul {
     background-image: url('../images/password_icon.png');
 }
 
-#invision form button{
+#invision form button {
     width: 302px;
     height: 62px;
     border: 1px solid #ff3366;
@@ -267,7 +289,7 @@ ul ul {
     transition: background-color 0.3s;
 }
 
-#invision form button:hover{
+#invision form button:hover {
     background-color: #ff274a;
 }
 
@@ -279,13 +301,98 @@ ul ul {
     text-align: center;
 }
 
+/*OCULUS*/
+#oculus {
+    width: 100%;
+    height: auto;
+
+}
+
+#oculus ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#oculus ul li {
+    overflow: hidden;
+    display: block;
+    height: 300px;
+    width: 33%;
+    float: left;
+    background-color: #1b1d1f;
+}
+
+.oculus_image {
+    display: block;
+
+    height: 300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    transition: all 0.3s ease-out;
+
+    border-top: 1px solid #1b1d1f;
+    text-align: center;
+    vertical-align: 50%;
+
+}
+
+.oculus_image a {
+    text-decoration: none!important;
+}
+
+.oculus_image a h4{
+    color: #a4a5a6;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 16px;
+    margin: 130px auto 0px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.oculus_image a h3 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0;
+    text-align: center;
+}
+
+.oculus_image:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.oculus_image a {
+    display: block;
+    height: 100%;
+}
+
+#oculus_first {
+    background-image: url('../images/eve-valkyrie.jpg');
+}
+
+#oculus_second {
+    background-image: url('../images/luckys-tale.jpg');
+}
+
+#oculus_third {
+    background-image: url('../images/touch.jpg');
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023.99px) {
-    #invision form input{
+    #invision form input {
         display: block;
         margin: 10px auto;
     }
 
-    #invision form button{
+    #invision form button {
         margin: 10px auto;
         display: block;
     }
@@ -293,15 +400,19 @@ ul ul {
 }
 
 @media screen and (max-width: 767.99px) {
-    #invision form input{
+    #invision form input {
         display: block;
         margin: 10px auto;
 
     }
 
-    #invision form button{
+    #invision form button {
         margin: 10px auto;
         display: block;
+    }
+
+    #oculus ul li {
+        width: 100%;
     }
 
 }
