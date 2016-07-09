@@ -31,7 +31,7 @@ body {
     display: none;
 }
 
-#microsoft_nav > .row{
+#microsoft_nav {
     height: 48px;
     width: 100%;
     padding: 0px;
@@ -40,9 +40,15 @@ body {
 
 #microsoft_logo {
     width: 108px;
+    height: 100%;
+    padding: 10px 0px;
+    margin: 0px 20px 0px 50px;
+    float: left;
+}
+
+#microsoft_logo a img{
+    width: 108px;
     height: 23px;
-    margin: 10px;
-    margin-left: 70px;
 }
 
 #microsoft_store{
@@ -51,59 +57,86 @@ body {
     vertical-align: 40px;
     padding: 0px 10px;
 
+
 }
 
-#microsoft_store span{
+.microsoft_nav{
+    height: 48px;
+    float: left;
+    padding: 0px 20px;
+}
+
+.microsoft_nav_right{
+    float: right;
+}
+
+.microsoft_nav span {
     position: relative;
     top: 10px;
-    height: 48px;
+    text-decoration: none;
+    color: #515151;
 }
 
-#microsoft_store:hover{
-    background-color: #e5e5e5;
+.microsoft_nav:hover{
+    background-color: #f4f4f4;
 }
+
 
 ul ul {
     padding: 0 0 0 2em;
 }
 
-#main_nav {
-    border: 1px solid #fbfbfb;
-    position: absolute;
-    left: 198px;
-    top: 48px;
+.microsoft_nav_menu{
     float: left;
     background-color: #f4f4f4;
     display: none;
-
+    clear: both;
     border: 1px solid lightgray;
 }
-
-#main_nav > li {
-
-}
-#main_nav li a {
+.microsoft_nav_menu li a {
     display: block;
     width: 239px;
     padding: 17px 24px;
     color: #515151;
 }
 
-#main_nav li a:hover {
+.microsoft_nav_menu li a:hover{
     background-color: #dcdcdc;
 }
 
-#main_nav li a span{
+.microsoft_nav_menu li a span {
     float: right;
 }
 
-.sub-menu {
-    height: 547px;
+#microsoft_store_nav {
     position: absolute;
     top: 48px;
-    left: 437px;
+    left: 179px;
+}
+
+#microsoft_products_nav{
+    position: absolute;
+    top: 48px;
+    left: 250px;
+}
+
+
+.sub-menu {
+    position: absolute;
     display: none;
     background-color: #dddddd;
+}
+
+#microsoft_store_submenu .sub-menu{
+    top: 48px;
+    left: 420px;
+    height: 547px;
+}
+
+#microsoft_products_submenu .sub-menu{
+    top: 48px;
+    left: 490px;
+    min-height: 272px;
 }
 
 .sub-menu li a {
@@ -117,17 +150,18 @@ ul ul {
     background-color: #d0d0d0;
 }
 
-#main_nav li:hover .sub-menu {
+#microsoft_store_nav li:hover .sub-menu {
+    display: block;
+}
+
+#microsoft_products_nav li:hover .sub-menu{
     display: block;
 }
 
 
-#flyouts {
+#microsoft_store_submenu, #microsoft_products_submenu {
     float: left;
 }
-#flyouts ul {
+#microsoft_store_submenu ul, #microsoft_products_submenu ul {
     display: none;
-}
-
-#flyouts ul li {
 }
