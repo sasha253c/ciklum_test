@@ -70,7 +70,7 @@ body {
     float: right;
 }
 
-.microsoft_nav span {
+.microsoft_nav span, .microsoft_nav form {
     position: relative;
     top: 10px;
     text-decoration: none;
@@ -165,3 +165,40 @@ ul ul {
 #microsoft_store_submenu ul, #microsoft_products_submenu ul {
     display: none;
 }
+
+#microsoft_nav_form {
+    padding: 0px;
+    margin: 0px;
+}
+
+#microsoft_nav_form form{
+    margin: 3px;
+    border: 1px solid #a0a0a0;
+}
+
+#microsoft_nav_form form input{
+    width: 244px;
+    height: 36px;
+    border: none;
+    float: left;
+
+
+}
+#microsoft_nav_form form:focus{
+    border: none;
+
+}
+
+#microsoft_nav_form form button{
+    width: 33px;
+    height: 33px;
+    background-image: url(../images/search_icon.png);
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-position: center;
+    border: none;
+
+
+}
+
+
