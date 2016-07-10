@@ -18,7 +18,7 @@ img {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, main, nav, section {
     display: block;
 }
 
@@ -50,6 +50,16 @@ blockquote:before, blockquote:after, q:before, q:after {
 @font-face {
     font-family: OpenSans;
     src: url(../fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: MyriadSetProMedium;
+    src: url('../fonts/myriad-set-pro_medium.ttf');
+}
+
+@font-face {
+    font-family: MyriadSetProBold;
+    src: url('../fonts/myriad-set-pro_bold.ttf');
 }
 
 /* HTML Tags */
@@ -333,6 +343,7 @@ ul ul {
 #invision form {
     width: 95%;
     margin: 0 auto;
+    text-align: center;
 
 }
 
@@ -372,8 +383,9 @@ ul ul {
     font-weight: 700;
     text-transform: uppercase;
     color: #ffffff;
-    padding: 20px 40px;
+    padding: 10px;
     transition: background-color 0.3s;
+
 }
 
 #invision form button:hover {
@@ -390,6 +402,7 @@ ul ul {
 
 /*OCULUS*/
 #oculus {
+    display: block;
     width: 100%;
     height: auto;
 
@@ -405,7 +418,7 @@ ul ul {
     overflow: hidden;
     display: block;
     height: 300px;
-    width: 33%;
+    width: 33.33%;
     float: left;
     background-color: #1b1d1f;
 }
@@ -421,8 +434,9 @@ ul ul {
     transition: all 0.3s ease-out;
 
     border-top: 1px solid #1b1d1f;
+    border-bottom: 1px solid #1b1d1f;
     text-align: center;
-    vertical-align: 50%;
+
 
 }
 
@@ -472,6 +486,131 @@ ul ul {
 #oculus_third {
     background-image: url('../images/touch.jpg');
 }
+
+/*APPLE*/
+#apple{
+    display: block;
+    clear: both;
+    width: 100%;
+    height: auto;
+    background-color: #f2f2f2;
+    padding-top: 12px;
+
+
+}
+
+#apple_nav {
+    max-width: 980px;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+.apple_nav_menu {
+    float: left;
+    width: 20%;
+    margin-bottom: 20px;
+
+}
+
+.apple_nav_menu h3{
+    font-family: MyriadSetProBold;
+    font-size: 12px;
+    line-height: 1.66667;
+    font-weight: 600;
+    letter-spacing: normal;
+    color: #333;
+    margin: 15px 0px 0px;
+
+}
+
+.apple_nav_menu ul li a{
+    font-family: MyriadSetProMedium;
+    font-size: 12px;
+
+    font-weight: 100;
+    letter-spacing: normal;
+    color: #666;
+
+}
+
+.apple_nav_menu ul li a:hover{
+    color: #464646;
+}
+
+#apple_footer{
+    clear: both;
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 22px;
+}
+
+.apple_footer_shop{
+    padding-bottom: 5px;
+    margin-bottom: 6px;
+    color: #999;
+    border-bottom: 1px solid #e3e3e3;
+    font-family: MyriadSetProMedium;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.apple_footer_shop a:hover{
+    color: #464646;
+}
+
+#apple_footer_copyright{
+    border: none;
+}
+#apple_footer_copyright span{
+    float: left;
+    margin-right: 26px;
+    display: block;
+}
+
+#apple_footer_copyright ul {
+    display: block;
+    margin-top: 10px;
+}
+
+#apple_footer_copyright ul li{
+    display: inline-block;
+    border-right: 1px solid #d6d6d6;
+    margin-right: 10px;
+    padding-right: 12px;
+    white-space: nowrap;
+}
+
+#apple_footer_copyright ul li:last-child{
+    border: none;
+}
+
+
+#apple_footer_copyright ul li a{
+    color: #666;
+}
+
+#apple_footer_copyright ul li a:hover{
+    color: #464646;
+}
+
+
+.apple_footer_locale{
+    margin-right: 10px;
+    float: right;
+    display: block;
+}
+
+.apple_footer_locale a{
+    color: #666;
+}
+
+.apple_footer_locale a:hover{
+    color: #464646;
+}
+
 
 @media screen and (min-width: 768px) and (max-width: 1023.99px) {
 
@@ -560,6 +699,21 @@ ul ul {
 
     #oculus ul li {
         width: 100%;
+    }
+
+    .apple_footer_locale{
+        float: left;
+
+    }
+
+    #apple_footer_copyright span{
+        clear: both;
+        margin: 10px 0px;
+
+    }
+
+    #apple_footer_copyright ul {
+        clear: both;
     }
 
 }
