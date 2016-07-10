@@ -159,7 +159,7 @@ ul ul {
 #microsoft_store_submenu .sub-menu {
     top: 48px;
     left: 420px;
-    height: 547px;
+    height: 542px;
 }
 
 #microsoft_products_submenu .sub-menu {
@@ -227,6 +227,93 @@ ul ul {
     background-position: center;
     border: none;
 }
+
+/*DROPBOX*/
+#dropbox {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+
+#dropbox .dropbox_background{
+    width: 150%;
+    height: 100%;
+
+    background-image: url('../images/dropbox_background.jpg');
+    background-color: #f7f7f7;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+
+}
+
+.dropbox_top_section{
+    max-width: 990px;
+    height: 550px;
+    padding: 75px 20px;
+    margin-left: 10%;
+    text-align: left;
+
+    color: #47525d;
+    font-family: OpenSans;
+}
+
+.dropbox_top_section > h1{
+    width: 450px;
+    height: 183px;
+    text-align: left;
+    font-size: 47.25px;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+.dropbox_top_section > h2 {
+    width: 450px;
+    font-size: 21px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+
+}
+
+.dropbox_top_section > a{
+
+    margin-bottom: 50px;
+    padding: 19px 26px;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 21px;
+    background-color: #0071e0;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none!important;
+}
+
+.dropbox_top_section > a:hover{
+    background-color: #1f85e0;
+    color: #ffffff;
+}
+
+.dropbox_top_section > span {
+    display: block;
+    margin-top: 30px;
+}
+
+.dropbox_top_section > span > a{
+    color: #0071e0;
+    margin-top: 15px;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.dropbox_top_section > span > a:hover {
+    color: #17a9e0;
+}
+
+
+
+/*INVISION*/
 
 #invision {
     height: auto;
@@ -387,6 +474,34 @@ ul ul {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023.99px) {
+
+
+    #dropbox .dropbox_background{
+        width: 179%;
+    }
+
+
+    .dropbox_top_section > h1{
+        font-size: 31px;
+        max-width: 350px;
+        margin-bottom: 0px;
+        height: 120px;
+    }
+    .dropbox_top_section > h2 {
+
+        font-size: 16px;
+        max-width: 330px;
+        font-weight: 100;
+    }
+
+    .dropbox_top_section > a{
+        border-radius: 6px;
+        font-weight: normal;
+        font-size: 16px;
+        padding: 14px 40px;
+    }
+
+
     #invision form input {
         display: block;
         margin: 10px auto;
@@ -400,6 +515,38 @@ ul ul {
 }
 
 @media screen and (max-width: 767.99px) {
+
+    .dropbox_background{
+        min-width: 1300px;
+        margin-left: 0px;
+    }
+
+    .dropbox_top_section{
+        margin-left: 0px;
+        max-width: 767px;
+        width: 400px;
+    }
+
+    .dropbox_top_section > h1{
+        font-size: 24px;
+        height: 70px;
+        width:  100%;
+
+    }
+    .dropbox_top_section > h2 {
+
+        font-size: 16px;
+        font-weight: 100;
+        width:  100%;
+    }
+
+    .dropbox_top_section > a{
+        font-size: 14px;
+        display: block;
+        margin: 20px;
+    }
+
+
     #invision form input {
         display: block;
         margin: 10px auto;
