@@ -522,6 +522,7 @@ ul ul {
     letter-spacing: normal;
     color: #333;
     margin: 15px 0px 0px;
+    border: none;
 
 }
 
@@ -701,9 +702,78 @@ ul ul {
         width: 100%;
     }
 
+    #apple_nav {
+        max-width: 980px;
+        height: auto;
+        width: 100%;
+        margin: 0px auto;
+        padding: 0px 16px;
+    }
+
+    .apple_nav_menu {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0px;
+
+    }
+
+    .apple_nav_menu > h3 {
+        height: 38px;
+        font-family: MyriadSetProMedium;
+        font-size: 14px;
+        line-height: 2.78571;
+        font-weight: 400;
+        letter-spacing: normal;
+
+        border-bottom: 1px solid gray;
+
+
+    }
+
+    .apple_nav_menu > h3:after {
+        content: '+';
+        float: right;
+        margin-right: 8px;
+
+    }
+
+    .apple_nav_submenu_invisible {
+
+    }
+
+    .apple_nav_submenu_invisible + ul {
+        display: none;
+        border-bottom: none;
+    }
+
+    .apple_nav_submenu_invisible + ul li{
+        display: none;
+
+    }
+
+    .apple_nav_submenu_visible {
+        font-family: MyriadSetProBold!important;
+
+        border-bottom: none!important;
+    }
+
+    .apple_nav_submenu_visible + ul {
+
+        border-bottom: 1px solid gray;
+
+    }
+
+    .apple_nav_submenu_visible + ul li {
+
+    }
+
+    .apple_nav_submenu_visible + ul li {
+
+    }
+
+
     .apple_footer_locale{
         float: left;
-
     }
 
     #apple_footer_copyright span{
