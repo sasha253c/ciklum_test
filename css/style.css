@@ -64,7 +64,6 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 /* HTML Tags */
 body {
-    font-family: SegoeUI;
     padding: 0px;
 }
 
@@ -75,8 +74,9 @@ body {
 #microsoft_nav {
     height: 48px;
     width: 100%;
-    padding: 0px;
-    border: 1px solid #eeeeee;
+    font-family: MyriadSetProMedium;
+    font-size: 16px;
+    display: block;
 }
 
 #microsoft_logo {
@@ -95,15 +95,12 @@ body {
 #microsoft_store {
     height: 48px;
     text-align: center;
-    vertical-align: 40px;
-    padding: 0px 10px;
-
 }
 
 .microsoft_nav {
     height: 48px;
     float: left;
-    padding: 0px 20px;
+    padding: 5px 20px;
 }
 
 .microsoft_nav_right {
@@ -121,16 +118,15 @@ body {
     background-color: #f4f4f4;
 }
 
-ul ul {
-    padding: 0 0 0 2em;
-}
-
 .microsoft_nav_menu {
     float: left;
     background-color: #f4f4f4;
     display: none;
     clear: both;
     border: 1px solid lightgray;
+    position: absolute;
+    top: 48px;
+
 }
 
 .microsoft_nav_menu li a {
@@ -148,34 +144,33 @@ ul ul {
     float: right;
 }
 
-#microsoft_store_nav {
-    position: absolute;
-    top: 48px;
-    left: 179px;
+#microsoft_store_nav{
+    left: 178px;
 }
 
 #microsoft_products_nav {
-    position: absolute;
-    top: 48px;
-    left: 250px;
+    left: 272px;
+}
+
+#microsoft_menu{
+    display: none;
 }
 
 .sub-menu {
     position: absolute;
     display: none;
     background-color: #dddddd;
+    top: 48px;
 }
 
-#microsoft_store_submenu .sub-menu {
-    top: 48px;
-    left: 420px;
+#microsoft_store_submenu .sub-menu{
+    left: 419px;
     height: 542px;
 }
 
-#microsoft_products_submenu .sub-menu {
-    top: 48px;
-    left: 490px;
-    min-height: 272px;
+#microsoft_products_submenu .sub-menu{
+    left: 513px;
+    min-height: 282px;
 }
 
 .sub-menu li a {
@@ -211,6 +206,7 @@ ul ul {
 }
 
 #microsoft_nav_form form {
+    padding: 2px 0px 2px 10px;
     margin: 3px;
     border: 1px solid #a0a0a0;
 }
@@ -223,15 +219,10 @@ ul ul {
 
 }
 
-#microsoft_nav_form form:focus {
-    border: none;
-
-}
-
 #microsoft_nav_form form button {
     width: 33px;
     height: 33px;
-    background-image: url(../images/search_icon.png);
+    background-image: url(../images/search_icon17x17.png);
     background-repeat: no-repeat;
     background-color: #ffffff;
     background-position: center;
@@ -615,6 +606,54 @@ ul ul {
 
 @media screen and (min-width: 768px) and (max-width: 1023.99px) {
 
+    #microsoft_nav_form {
+        width: 44px;
+        height: 48px;
+        margin: 0px 9px;
+        background-image: url('../images/search_icon21x21.png');
+        background-repeat: no-repeat;
+        background-size: 21px;
+        background-position: center;
+    }
+
+    #microsoft_nav_form:hover{
+        background-color: #f2f2f2;
+    }
+
+    #microsoft_nav_form form{
+        display: none;
+    }
+
+    .microsoft_nav_form_visible {
+        display: block!important;
+        height: 80px;
+        width: 80%;
+        margin: 0px auto!important;
+        padding-top: 23px!important;
+        padding-left: 10%;
+        padding-right: 10%;
+        background-color: #f2f2f2;
+        position: absolute;
+        float: none;
+        clear: both;
+        left: 10%;
+        top: 48px;
+    }
+
+    .microsoft_nav_form_visible > input{
+        width: 100%;
+        height: 33px!important;
+        padding-left: 10px;
+        width: 90%!important;
+        color: black;
+    }
+
+    .microsoft_nav_form_visible > button{
+        background-color: #1f85e0!important;
+    }
+
+
+
 
     #dropbox .dropbox_background{
         width: 179%;
@@ -655,6 +694,120 @@ ul ul {
 }
 
 @media screen and (max-width: 767.99px) {
+
+    #microsoft_nav_form {
+        width: 44px;
+        height: 48px;
+        margin: 0px 9px;
+        background-image: url('../images/search_icon21x21.png');
+        background-repeat: no-repeat;
+        background-size: 21px;
+        background-position: center;
+    }
+
+    #microsoft_nav_form:hover{
+        background-color: #f2f2f2;
+    }
+
+    #microsoft_nav_form form{
+        display: none;
+    }
+
+    .microsoft_nav_form_visible {
+        display: block!important;
+        height: 80px;
+        width: 80%;
+        margin: 0px auto!important;
+        padding-top: 23px!important;
+        padding-left: 10%;
+        padding-right: 10%;
+        background-color: #f2f2f2;
+        position: absolute;
+        float: none;
+        clear: both;
+        left: 10%;
+        top: 48px;
+    }
+
+    .microsoft_nav_form_visible > input{
+        width: 100%;
+        height: 33px!important;
+        padding-left: 10px;
+        width: 90%!important;
+        color: black;
+    }
+
+    .microsoft_nav_form_visible > button{
+        background-color: #1f85e0!important;
+    }
+
+    #microsoft_menu {
+        display: block;
+        height: auto;
+    }
+
+    #microsoft_adaptive_menu{
+        display: block;
+
+        width: 239px;
+        height: auto;
+        position: absolute;
+        right: 0px;
+        top: 48px;
+
+    }
+
+
+    #microsoft_store, #microsoft_products, #microsoft_support{
+        display: none;
+        width: 239px;
+        min-height: 48px;
+        height: auto;
+        clear: both;
+        background-color: #f2f2f2;
+        text-align: left;
+        z-index: 1;
+    }
+
+
+    .microsoft_nav_menu{
+        z-index: 10;
+        float: left;
+        clear: both;
+        position: static;
+        margin-top: 30px;
+        margin-left: -20px;
+        margin-right: -30px;
+
+    }
+
+    #microsoft_store_nav{
+
+    }
+
+    #microsoft_products_nav{
+
+    }
+    .sub-menu{
+
+    }
+
+    #microsoft_store_submenu{
+        position: absolute;
+
+        z-index: 8;
+        top: 0px;
+        left: -380px;
+        display: none;
+    }
+
+    #microsoft_products_submenu{
+        display: none;
+    }
+
+
+
+    
 
     .dropbox_background{
         min-width: 1300px;
@@ -753,7 +906,6 @@ ul ul {
 
     .apple_nav_submenu_visible {
         font-family: MyriadSetProBold!important;
-
         border-bottom: none!important;
     }
 
