@@ -781,29 +781,10 @@ body {
 
     }
 
-    #microsoft_store_nav{
-
-    }
-
-    #microsoft_products_nav{
-
-    }
     .sub-menu{
-
+        display: none!important;
     }
 
-    #microsoft_store_submenu{
-        position: absolute;
-
-        z-index: 8;
-        top: 0px;
-        left: -380px;
-        display: none;
-    }
-
-    #microsoft_products_submenu{
-        display: none;
-    }
 
 
 

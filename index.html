@@ -15,11 +15,11 @@
     <script>
         window.onload = function () {
             var store_clicked = false,
-                product_clicked = false;
+                    product_clicked = false;
 
             var microsoft_store = document.getElementById('microsoft_store'),
-                microsoft_products = document.getElementById('microsoft_products'),
-                microsoft_support = document.getElementById('microsoft_support');
+                    microsoft_products = document.getElementById('microsoft_products'),
+                    microsoft_support = document.getElementById('microsoft_support');
 
             function resizeMicrosoftMenu() {
                 if (768 < document.documentElement.clientWidth) {
@@ -28,6 +28,8 @@
                     $('#microsoft_nav').append(microsoft_support);
                     $('#microsoft_nav').append($('#microsoft_store_nav'));
                     $('#microsoft_nav').append($('#microsoft_products_nav'));
+
+                    smartMicrosoftMenu();
                 }
                 else {
                     $('#microsoft_adaptive_menu').append(microsoft_store);
@@ -38,44 +40,43 @@
 
                 }
             }
+
             resizeMicrosoftMenu();
 
 
+            (function () {
+                $("#microsoft_store_nav").menuAim({
+                    activate: function (a) {
+                        var idx = $(a).index();
+                        $('#microsoft_store_submenu ul').eq(idx).show();
+
+                        $('#microsoft_store_nav li a').css({'background-color': '#f4f4f4'});
+                        $('#microsoft_store_nav li a').eq(idx).css({'background-color': '#dcdcdc'});
+                    },  // fired on row activation
+                    deactivate: function (a) {
+                        var idx = $(a).index();
+                        $('#microsoft_store_submenu ul').eq(idx).hide();
+                    }  // fired on row deactivation
+
+                });
+
+                $("#microsoft_products_nav").menuAim({
+                    activate: function (a) {
+                        var idx = $(a).index();
+                        $('#microsoft_products_submenu ul').eq(idx).show();
+
+                        $('#microsoft_products_nav li a').css({'background-color': '#f4f4f4'});
+                        $('#microsoft_products_nav li a').eq(idx).css({'background-color': '#dcdcdc'});
+                    },  // fired on row activation
+                    deactivate: function (a) {
+                        var idx = $(a).index();
+                        $('#microsoft_products_submenu ul').eq(idx).hide();
+                    }  // fired on row deactivation
+                });
+            })();
 
 
-                    (function () {
-                        $("#microsoft_store_nav").menuAim({
-                            activate: function (a) {
-                                var idx = $(a).index();
-                                $('#microsoft_store_submenu ul').eq(idx).show();
-
-                                $('#microsoft_store_nav li a').css({'background-color': '#f4f4f4'});
-                                $('#microsoft_store_nav li a').eq(idx).css({'background-color': '#dcdcdc'});
-                            },  // fired on row activation
-                            deactivate: function (a) {
-                                var idx = $(a).index();
-                                $('#microsoft_store_submenu ul').eq(idx).hide();
-                            }  // fired on row deactivation
-
-                        });
-
-                        $("#microsoft_products_nav").menuAim({
-                            activate: function (a) {
-                                var idx = $(a).index();
-                                $('#microsoft_products_submenu ul').eq(idx).show();
-
-                                $('#microsoft_products_nav li a').css({'background-color': '#f4f4f4'});
-                                $('#microsoft_products_nav li a').eq(idx).css({'background-color': '#dcdcdc'});
-                            },  // fired on row activation
-                            deactivate: function (a) {
-                                var idx = $(a).index();
-                                $('#microsoft_products_submenu ul').eq(idx).hide();
-                            }  // fired on row deactivation
-                        });
-                    })();
-
-
-            $(window).resize(function(){
+            $(window).resize(function () {
                 //alert('resize');
                 resizeMicrosoftMenu();
 
@@ -94,8 +95,7 @@
             });
 
 
-
-            microsoft_store.addEventListener('click', function(event) {
+            microsoft_store.addEventListener('click', function (event) {
                 if (!store_clicked) {
                     $('#microsoft_store_nav').show();
 
@@ -142,15 +142,11 @@
             });
 
 
-
-
-
-
             var microsoft_form = document.getElementById('microsoft_nav_form');
 
-            microsoft_form.addEventListener('click', function(event) {
+            microsoft_form.addEventListener('click', function (event) {
                 var form = $('#microsoft_nav_form > form');
-                if (!form.hasClass('microsoft_nav_form_visible')){
+                if (!form.hasClass('microsoft_nav_form_visible')) {
                     //alert('visible');
                     form.addClass('microsoft_nav_form_visible');
                 }
@@ -169,8 +165,8 @@
 
             microsoft_menu.addEventListener('click', function (event) {
 
-                if (document.documentElement.clientWidth <= 768){
-                    if (!microsoft_menu_visible){
+                if (document.documentElement.clientWidth <= 768) {
+                    if (!microsoft_menu_visible) {
                         $('#microsoft_adaptive_menu').show();
 
                         microsoft_store.style.display = 'block';
@@ -179,7 +175,7 @@
 
                         microsoft_menu_visible = true;
                     }
-                    else{
+                    else {
                         microsoft_store.style.display = 'none';
                         microsoft_products.style.display = 'none';
                         microsoft_support.style.display = 'none';
@@ -192,20 +188,16 @@
             });
 
 
-
-
-
-
             var apple_nav = document.getElementsByClassName('apple_nav_submenu_invisible');
 
-            for (var i=0; i < apple_nav.length; i++){
+            for (var i = 0; i < apple_nav.length; i++) {
                 var elem = apple_nav[i];
                 elem.addEventListener('click', function () {
-                    if (this.classList.contains('apple_nav_submenu_invisible')){
+                    if (this.classList.contains('apple_nav_submenu_invisible')) {
                         this.classList.remove('apple_nav_submenu_invisible');
                         this.classList.add('apple_nav_submenu_visible');
                     }
-                    else{
+                    else {
                         this.classList.remove('apple_nav_submenu_visible');
                         this.classList.add('apple_nav_submenu_invisible');
                     }
@@ -257,9 +249,8 @@
     </div>
 
 
-
     <ul id="microsoft_store_nav" class="microsoft_nav_menu">
-        <li><a href="#">Store hone</a></li>
+        <li><a href="#">Store home</a></li>
         <li><a href="#">Devices <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
         <li><a href="#">Software <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
         <li><a href="#">Apps <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></li>
@@ -411,7 +402,8 @@
         <div class="dropbox_background">
             <div class="dropbox_top_section">
                 <h1>Безопасный доступ, синхронизация и совместная работа</h1>
-                <h2>Хранение и безопасный доступ к данным — аккаунты Dropbox Business пользуются доверием у системных администраторов и нравятся пользователям.</h2>
+                <h2>Хранение и безопасный доступ к данным — аккаунты Dropbox Business пользуются доверием у системных
+                    администраторов и нравятся пользователям.</h2>
                 <a href="#">Попробуйте бесплатную 30-дневную ознакомительную версию</a>
 
                 <span>или <a href="#">купите прямо сейчас</a></span>
@@ -424,13 +416,17 @@
     <section id="invision">
         <h2>Join over 2 million designers already using InVision. Get InVision <strong>free</strong> forever!</h2>
         <form method="POST" id="signup_form" class="signup_form" action="">
-            <input type="text" name="name" id="invision_name" value="" autocomplete="off" spellcheck="false" placeholder="Your Name"/>
-            <input type="email" name="email" id="invision_email" value="" autocomplete="off" spellcheck="false" placeholder="Email Address"/>
-            <input type="password" name="password" id="invision_password" value="" autocomplete="off" spellcheck="false" placeholder="Create a Password"/>
+            <input type="text" name="name" id="invision_name" value="" autocomplete="off" spellcheck="false"
+                   placeholder="Your Name"/>
+            <input type="email" name="email" id="invision_email" value="" autocomplete="off" spellcheck="false"
+                   placeholder="Email Address"/>
+            <input type="password" name="password" id="invision_password" value="" autocomplete="off" spellcheck="false"
+                   placeholder="Create a Password"/>
             <button type="submit">Get Started &mdash; Free Forever!</button>
         </form>
 
-        <p class="terms">By clicking "Get Started &mdash; Free Forever!" I agree to InVision's <a href="#">Terms of Service.</a></p>
+        <p class="terms">By clicking "Get Started &mdash; Free Forever!" I agree to InVision's <a href="#">Terms of
+            Service.</a></p>
     </section>
 
     <!--Oculus-->
